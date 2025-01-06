@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mon site Web</title>
+</head>
+<body>
+   <header>
+    <div class="principale">
+        <div class="logo">
+            <a href="#">
+                <img src="./Image1/Yulendo.PNG"  style="height: 67px;">
+              </a>
+
+        </div>
+        <ul>
+            <li class="active">
+                <a href="./index.html">Accueil</a>
+            </li>
+            <li>
+                <a href="./service.html">Service</a>
+            </li>
+            <li>
+                <a href="./blog.html">Blog</a>
+            </li>
+            <li>
+                <a href="./PDF/A_propos_de_nous">A propos de nous</a>
+            </li>
+            <li>
+                <a href="./contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div class="titre">
+        <h1>BIENVENUE</h1>
+    </div>
+    <div class="bouton">
+        <a href="#" class="btn" id="chatbot-button">CHATBOT</a>
+        <a href="#" class="btn">RESERVER</a>
+    </div>
+   </header> 
+</body>
+</html>
+
+
+<div id="chatbot-container" style="display: none;">
+    <form method="POST">
+        <div id="chat-container">
+            <label for="user-input">Votre question :</label>
+            <input type="text" id="user-input" name="user_input" placeholder="Posez votre question...">
+            <button type="submit">Envoyer</button>
+        </div>
+    </form>
+</div>
+
+
+<script>
+    const chatbotButton = document.getElementById('chatbot-button');
+    const chatbotContainer = document.getElementById('chatbot-container');
+
+    chatbotButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Empêche le comportement par défaut du lien
+        if (chatbotContainer.style.display === 'none') {
+            chatbotContainer.style.display = 'block'; // Affiche le chatbot
+        } else {
+            chatbotContainer.style.display = 'none'; // Masque le chatbot
+        }
+    });
+</script>
+
